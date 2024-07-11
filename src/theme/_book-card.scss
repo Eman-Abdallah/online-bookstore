@@ -1,0 +1,109 @@
+.card {
+    max-width: 428px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -2rem 2rem 3.2rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+  }
+  
+  .product-left {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fe2929, #ffb3c5);
+    color: #fff;
+  }
+  
+  .product-right {
+    width: 0;
+  }
+  
+  .product-right  {
+    img{
+      position: absolute;
+      top: 10px;
+      left: 66%;
+    }
+}
+  
+  
+  .header h1 {
+    text-transform: uppercase;
+    margin: 2rem 0;
+     font-size: 1rem;
+     max-width: 200px;
+}
+  
+  
+  /* Price */
+  
+  .header h2 {
+    margin: 0rem 0 2rem 0;
+    font-weight: 300;
+    font-size: 0.8rem !important;
+    }
+  
+  /* Product Description */
+  
+  .product-main p {
+    opacity: 0.8;
+    margin: 0.5rem 0;
+    line-height: 1.8;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.8rem;
+  }
+  
+  .focus {
+    text-transform: uppercase;
+    // border-bottom: 0.2rem solid rgba(250, 250, 250, 0.3);
+  }
+  
+  .focus span:first-child {
+    border-bottom: 0.2rem solid #fff;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Choose color / quantity  */
+  
+  .btns-group {
+    width: 100%;
+  }  
+  .product-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    h3{
+      font-size: 0.8rem !important;
+    }
+  }
+  .product-add {
+    border: 1px solid #FE2E2E;
+    padding: 0.5rem;
+    transition: all 0.5s ease-out;
+    background-color: #fff;
+    color: #fe2929;
+  }
+  
+  .product-add:hover {
+    background-color: #fff;
+    color: #2e282a;
+  }
+  
+  .product-btns a {
+    text-decoration: none;
+    color: #FE2E2E;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+  }

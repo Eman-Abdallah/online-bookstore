@@ -1,0 +1,19 @@
+#sidebar {
+  height: 82vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 68px;
+  }
+  
+  main {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  .profile{
+    height: 82vh;
+  }

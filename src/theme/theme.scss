@@ -1,0 +1,10 @@
+@import'./global';
+@import'./header';
+@import'./book-card';
+@import'./form';
+@import'./cart';
+$primary: #fe2929;
+@import "node_modules/bootstrap/scss/bootstrap";
+.btn-primary{
+    color: white !important;
+}

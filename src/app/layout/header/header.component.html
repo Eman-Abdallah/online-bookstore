@@ -1,0 +1,36 @@
+
+  <header class="container-fluid p-0 bg-light">
+    <div class="header-blue container">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+            <div class="container-fluid"><a class="navbar-brand" href="#">Book Store</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav w-100">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" routerLink="/" routerLinkActive="">Home</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" routerLink="/books">Books</a></li>
+                    
+                        <!-- <li class="nav-item" role="presentation" *ngIf="isUserAuthenticated()"><a class="nav-link" routerLink="/liked-list">Liked List</a></li> -->
+                        <li class="nav-item" role="presentation" *ngIf="isUserAuthenticated()"><a class="nav-link" routerLink="/profile">Hello {{userId}}</a></li>
+                        <li *ngIf="!isUserAuthenticated()" class="nav-item">
+                            <a class="btn btn-outline-primary" routerLink="/sign-up">Register</a>
+                          </li>
+                          <li *ngIf="isUserAuthenticated()" class="nav-item">
+                            <a class=" btn btn-outline-primary" (click)="logOut()">Logout</a>
+                          </li>
+                          <li class="nav-item ms-auto" role="presentation" *ngIf="isUserAuthenticated()"><a class="nav-link" routerLink="/orders">
+                            <div class="postion-relative">
+
+                                <i class="fa fa-shopping-cart"></i>
+                                <div class="number position-absolute">{{cartItems.length}}</div>
+                            </div>
+                        </a></li>
+                    </ul>
+                    <!-- <form class="form-inline mr-auto" target="_self">
+                        <div class="form-group"><label for="search-field"><i class="fa fa-search text-white"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
+                    </form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Signup</a></div> -->
+            </div>
+            </div>
+        </nav>
+
+    </div>
+</header>

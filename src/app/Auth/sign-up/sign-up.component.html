@@ -1,0 +1,24 @@
+<div class="form-container d-flex justify-content-center container">
+
+  <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <div class="container-fluid">
+          <h2 class="form-signin-heading">Register</h2>
+           <!-- <div *ngIf="!loginForm.valid" class="alert alert-danger">Invalid username or password.</div>  -->
+          <br/>
+          <label for="username" class="sr-only">User Name</label>
+          <input type="text" id="username" name="username" ngModel class="form-control" placeholder="User Name" required autofocus>
+          <span class="text-danger">{{userErrorMessage}}</span> 
+          <br>
+          <label for="username" class="sr-only">User Email</label>
+          <input type="email" id="email" name="email" ngModel class="form-control" placeholder="Enter your email" required >
+          <span class="text-danger">{{errorMessage}}</span> 
+         
+          <br/>
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Password" required>
+          <br/>
+          <button class="btn btn-lg btn-primary  btn-block" type="submit" [disabled]="!loginForm.valid" >Register</button>
+      </div>
+      <button class="btn"><a routerLink="/sign-in" class="text-primary"> already have account</a></button>
+  </form>
+</div>

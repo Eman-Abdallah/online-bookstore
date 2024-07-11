@@ -1,0 +1,46 @@
+<!-- <div class="container mt-5">
+  <h2>Order History</h2>
+  <div *ngFor="let order of orders" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Order #{{order.id}}</h5>
+      <p class="card-text">Total: {{order.totalAmount}} $</p>
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let item of order.orderItems" class="list-group-item">
+          {{item.book.title}} - {{item.quantity}} x {{item.price}} $
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<div class="container-fluid profile mt-5">
+  <div class="row">
+    <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="details">
+              <span data-feather="home"></span>
+              Personal Details
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="orders">
+              <span data-feather="file"></span>
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="liked-items">
+              <span data-feather="shopping-cart"></span>
+              Liked Items
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<!-- 
+<div class="cart">
+    <div class="shopping-cart">
+      <div class="title d-flex justify-content-between">
+        <h2>
+            Your Liked Books
+        </h2>
+        <button class="btn btn-primary" routerLink="/books">Keep Searching</button>
+      </div>
+     <ng-container *ngIf="likedBooks.length == 0">
+      <div class="no-data">
+        <img src="assets/images/cart/shopaholic-shopping-cart-with-hearts-svgrepo-com.svg" alt="">
+        <h4 class="mt-3">
+          Your Liked Books List is empty
+        </h4>
+        <button class="btn btn-primary" routerLink="/books">Keep Searching</button>
+      </div>
+     </ng-container>
+      <div class="item" *ngFor="let item of likedBooks">
+
+     
+        <div class="image">
+          <img [src]="item.book.imageUrl" alt="Product Image" class="product-image"/>
+        </div>
+     
+        <div class="description">
+          <span>{{item.book.title}}</span>
+          <span>{{item.book.author}}</span>
+        </div>         
+        <div class="total-price">{{item.book.price}} $</div>
+        <div class="buttons">
+            <span class="delete-btn" (click)="removeFromLiked(item.bookId)">
+              <img src="assets/images/cart/delete-2-svgrepo-com.svg" alt="">
+            </span>
+            <span class="like-btn" (click)="addToCart(item.bookId,item.book.price)">
+              <img src="assets/images/cart/add-to-cart-svgrepo-com.svg" alt="">
+            </span>
+          </div>
+      </div>
+    </div>
+  </div> -->
+<div class="cart">
+  <ng-container *ngIf="likedBooks.length == 0">
+    <div class="no-data">
+      <img src="assets/images/cart/shopaholic-shopping-cart-with-hearts-svgrepo-com.svg" alt="">
+      <h4 class="mt-3">
+        Your Liked Books List is empty
+      </h4>
+      <button class="btn btn-primary" routerLink="/books">Keep Searching</button>
+    </div>
+   </ng-container>
+  <div class="card mb-3" *ngFor="let item of likedBooks">
+    <div class="card-body d-flex">
+      <div class="image">
+        <img [src]="item.book.imageUrl" alt="Product Image" class="product-image"/>
+      </div>
+   
+      <div class="description">
+        <span>{{item.book.title}}</span>
+        <span>{{item.book.author}}</span>
+      </div>         
+      <div class="total-price">{{item.book.price}} $</div>
+      <div class="buttons">
+          <span class="delete-btn" (click)="removeFromLiked(item.bookId)">
+            <img src="assets/images/cart/delete-2-svgrepo-com.svg" alt="">
+          </span>
+          <span class="like-btn" (click)="addToCart(item.bookId,item.book.price)">
+            <img src="assets/images/cart/add-to-cart-svgrepo-com.svg" alt="">
+          </span>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+.featured-books, .categories, .new-arrivals, .testimonials, .newsletter {
+    padding: 20px;
+  }
+  
+  .book-carousel, .category-list, .book-list, .testimonial-carousel {
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .book, .category, .testimonial {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .newsletter button {
+    padding: 10px;
+  }
+  .categories{
+      text-align: center;
+    .category{
+        min-width: 175px !important;
+    }
+    img{
+        width: 100px;
+        height: 66px;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+  }
+
+
+  .horizontal-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 10ch;
+    gap: 2rem;
+    justify-content: center;
+
+    & > figure {
+      display: grid;
+      gap: 1ex;
+      margin: 0;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .2s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+      &:last-child::after {
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 100%;
+        right: -2rem;
+        inline-size: 2rem;
+        block-size: 100%;
+        inset-end: -2rem;
+      }
+  
+      & > picture {
+        display: inline-block;
+        inline-size: 10ch;
+        block-size: 10ch;
+        border-radius: 50%;
+  
+        background: 
+          radial-gradient(hsl(0 0% 0% / 15%) 60%, transparent 0),
+          radial-gradient(white 65%, transparent 0),
+          linear-gradient(to top right, orange, deeppink);
+  
+        & > img {
+          display: block;
+          inline-size: 100%;
+          block-size: 100%;
+          object-fit: cover;
+          clip-path: circle(42%);
+        }
+      }
+  
+      & > figcaption {
+
+        white-space: nowrap;
+        font-weight: 500;
+      }
+    }
+  }
+  

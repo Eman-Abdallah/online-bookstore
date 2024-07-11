@@ -1,0 +1,46 @@
+
+  <div class="container book-list">
+    <div class="row justify-content-center py-3">
+      <div class="col-4 text-center">
+        <h2 class="mb-3">Book List</h2>
+      </div>
+    <div *ngIf="books && books.length > 0; else noBooks">
+      <div class="wrapper row ">
+        <div class="card col-md-4 p-0" *ngFor="let book of books">
+          <div class="product-left justify-content-around">
+            <div class="header">
+              <h1>{{ book.title }}</h1>
+              <h2>Author: {{ book.author }}</h2>
+            </div>
+            <!--DESCRIPITON / DETAILS-->
+            <div class="product-main">
+              <div class="focus">
+                <span>Description</span>
+              </div>
+              <p>{{ book.description }}</p>
+            </div>
+            <!--CHOOSE PRODUCT DETAILS-->
+            <div class="product-details">
+              
+              <!--PRODUCT TOTAL-->
+              <div class="product-total">
+                <h3>Total Price</h3>
+                <p class="mb-0">{{ book.price }} $</p>
+              </div>
+            </div>
+            <!-- ADD TO CART BUTTON -->
+            <div class="product-btns d-flex justify-content-between">
+              <a (click)="readMore(book.id)" class="btn btn-light btn-lg action-button">Read more</a>
+              <a class="btn btn-light btn-lg action-button" (click)="addToCart(book.id,book.price)">Add To Cart</a>
+            </div>
+          </div>
+          <div class="product-right">
+            <img [src]="book.imageUrl" [alt]="book.title">
+          </div>
+        </div>
+      </div>
+  </div>
+  <ng-template #noBooks>
+    <p>No books available.</p>
+  </ng-template>
+  </div>
